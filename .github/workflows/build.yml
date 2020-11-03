@@ -17,6 +17,8 @@ jobs:
         run: |
           curl -o ~/build-wrapper-linux-x86.zip https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
           unzip ~/build-wrapper-linux-x86.zip
+          pwd
+          ls -l
           chmod +x ~/build-wrapper-linux-x86/build-wrapper-linux-x86-64
           ln ~/build-wrapper-linux-x86/build-wrapper-linux-x86-64 /usr/local/bin/build-wrapper-x86-64
           build-wrapper-linux-x86-64 --out-dir ./build_wrapper-output-directory make clean all
