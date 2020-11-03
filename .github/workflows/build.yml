@@ -21,8 +21,8 @@ jobs:
           unzip ~/build-wrapper-linux-x86.zip -d ~/
           echo ">> Additional execution permission"
           chmod +x ~/build-wrapper-linux-x86/build-wrapper-linux-x86-64
-          echo ">> Link to /usr/local/bin directory"
-          sudo ln ~/build-wrapper-linux-x86/build-wrapper-linux-x86-64 /usr/local/bin/build-wrapper-linux-x86-64
+          echo ">> Move to /usr/local/bin directory"
+          sudo mv ~/build-wrapper-linux-x86/* /usr/local/bin/
           echo ">> Start"
           ls -l /usr/local/bin
           build-wrapper-linux-x86-64 --out-dir ./build_wrapper-output-directory make clean all
