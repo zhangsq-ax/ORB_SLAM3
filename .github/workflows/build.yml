@@ -16,7 +16,7 @@ jobs:
       - name: Prepare Build Wrapper
         run: |
           curl -o ~/build-wrapper-linux-x86.zip https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
-          unzip ~/build-wrapper-linux-x86.zip ~/
+          unzip ~/build-wrapper-linux-x86.zip -d ~/
           pwd
           ls -l ~/
           ls -l
